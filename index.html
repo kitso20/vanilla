@@ -2,25 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
     <title>weather-app</title>
 </head>
 <body>
+    <div class="cude">
     <header>
-        <form>
-        <input type="search" placeholder="Enter city..">
-        <input type="submit" value="search"></form>
+        <form class="search">
+        <input type="search" placeholder="Enter city.." id="searchbutton">
+        <input type="submit" value="search" class="submit"></form>
     </header>
     <main>
         <h1>South Africa</h1>
-        <div>
-        <p>monday 10:02, partly cloudy
-            <br> humidity: 40%, wind: 21km/h </p></div>
-            <div>🌤️ 29°C</div>
+        
+        <p><div class="monday"><div class="monday-d">monday 10:02, partly cloudy
+            <br> humidity: 40%, wind: 21km/h </div>
+            <div class="temp"><samp class="temp-icon">🌤️</samp> <samp class="temp-num"> 29</samp><samp class="temp-c">°C</samp></div></p>
+            </div>
     </main>
     <footer>coded by <a href="https://github.com/kitso20" target="_blank">kitso</a>,
         open-sourced on <a href="https://github.com/kitso20/vanilla" target="_blank">github</a>,
         webside hosted on <a href="https://vanilla-sigma-seven.vercel.app/" target="_blank">vercel</a>
     </footer>
+</div>
 </body>
 </html>
