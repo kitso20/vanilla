@@ -1,17 +1,17 @@
 body{
     font-family: "Roboto", sans-serif;
-    background-color: aliceblue;
+    background:linear-gradient(to right,rgb(192, 58, 215) 11.4%,rgb(192, 216, 238) 88.6%)
 }
 
 .cude{
-    background-color: rgb(195, 234, 234);
-    width: 70%;
+    background-color: rgba(195, 207, 234, 0.771);
+    max-width: 600px;
     border-radius: 6px;
-    margin: 50px auto;
+    margin:0 auto;
     padding: 30px ;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
-form{
+.search{
     text-align: center;
     border-bottom: 1px solid #58565c3e;
     padding: 0 0 15px 0;
@@ -28,16 +28,39 @@ form{
     font-size: 20px;
     padding: 5px 13px;
 }
-.monday{
+.report{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-    margin-top: 0 auto;
-    text-align: center;
+}
+.monday-d{
+    font-size: 17px;
 }
 .temp{
     
+    display: flex;
+    justify-content: space-between;
 
+}
+.monday{
+    
+}
+.temp-num{
+    font-size: 100px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+}
+.temp-c{position: relative;
+    top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+}
+
+.temp-icon{
+    position: relative;
+    top: 20px;
+}
+h1{
+    margin: 5px auto;
 }
 footer{
     font-size: 13px;
