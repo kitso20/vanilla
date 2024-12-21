@@ -2,7 +2,9 @@ body{
     font-family: "Roboto", sans-serif;
     background:linear-gradient(to right,rgb(192, 58, 215) 11.4%,rgb(192, 216, 238) 88.6%)
 }
-
+strong{
+    color: rgb(123, 93, 137);
+}
 .cude{
     background-color: rgba(195, 207, 234, 0.771);
     max-width: 600px;
@@ -39,10 +41,6 @@ body{
     
     display: flex;
     justify-content: space-between;
-
-}
-.monday{
-    
 }
 .temp-num{
     font-size: 100px;
@@ -62,8 +60,12 @@ body{
 h1{
     margin: 5px auto;
 }
+a{
+    color: blueviolet;
+    font-weight: bold;
+}
 footer{
-    font-size: 13px;
+    font-size: 17px;
     border-top: 1px solid #58565c3e;
     padding: 15px 0 0 0;
 }

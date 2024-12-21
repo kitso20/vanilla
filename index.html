@@ -12,18 +12,18 @@
 <body>
     <div class="cude">
     <header>
-        <form class="search">
+        <form class="search" id="search">
         <input type="search" placeholder="Enter city.." id="searchbutton">
         <input type="submit" value="search" class="submit"></form>
     </header>
     <main class="report">
         <div class="info">
-            <h1>South Africa</h1>
+            <h1 id="mcity">South Africa</h1>
             
                 <div class="monday">
                     <div class="monday-d">monday 10:02, partly cloudy
                         <br>
-                        humidity: 40%, wind: 21km/h 
+                        humidity: <strong>40%</strong>, wind: <strong>21km/h</strong> 
                     </div>
                 </div>
             
@@ -41,5 +41,6 @@
         webside hosted on <a href="https://vanilla-sigma-seven.vercel.app/" target="_blank">vercel</a>
     </footer>
 </div>
+<script src="src/script.js"></script>
 </body>
 </html>
