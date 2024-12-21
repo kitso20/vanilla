@@ -8,6 +8,8 @@ strong{
 .cude{
     background-color: rgba(195, 207, 234, 0.771);
     max-width: 600px;
+    position: relative;
+    top: 3pc;
     border-radius: 6px;
     margin:0 auto;
     padding: 30px ;
