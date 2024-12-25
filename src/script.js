@@ -20,22 +20,36 @@ let days = [
   `friday`,
   `saturday`,
 ]
-let time = `${days[now.getDay()]} ${hour}:${min}`
+let time = `${days[day]} ${hour}:${min}`
 currenttime.innerHTML = `${time}`
     
 }
-function forecast(responde){
-    console.log(responde)
-    let days = [`mon`, `tue`, `wed`, `thr`, `fri`]
-    let forecastHTML = ``
+function foracastDay(numbers){
+    let date = new Date (numbers * 1000)
+    let days = [
+            `sun`,
+            `mon`,
+            `tue`,
+            `wed`,
+            `thr`,
+            `fri`,
+            `sat`,
+          ]
 
-    days.forEach(function(day){
-        forecastHTML += `<div class="weekday"><div class="forecast-day">${day}</div>
-        <div class="forecast-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"></div>
+          return days[date.getDay()]
+}
+function forecast(responde){
+    let forecastHTML = ``
+    
+    responde.data.daily.forEach(function(day , index){
+        if (index < 5){
+        
+        forecastHTML += `<div class="weekday"><div class="forecast-day">${foracastDay(day.time)}</div>
+        <div class="forecast-icon"><img src="${day.condition.icon_url}"></div>
         <div class="forecast-temp">
-            <div class="fore-temp"><strong>31°</strong></div>
-            <div class="fore-temp">22°</div>
-        </div></div>`
+            <div class="fore-temp"><strong>${Math.round(day.temperature.maximum)}°</strong></div>
+            <div class="fore-temp">${Math.round(day.temperature.minimum)}°</div>
+        </div></div>`}
     })
     let forecastElement = document.querySelector(`#waether-forecast`)
     forecastElement.innerHTML = forecastHTML
@@ -58,7 +72,7 @@ function changeHTML(responde){
     wind.innerHTML = speed
     temperatureElement.innerHTML = temperature
     newtime(nowt)
-
+    
 }
 
 function searchcity(city){
@@ -77,6 +91,5 @@ function searchsubmit(event){
 }
 let now = new Date()
 newtime(now)
-forecast()
 let search = document.querySelector(`#search`)
 search.addEventListener(`submit`,searchsubmit)
