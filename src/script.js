@@ -24,8 +24,8 @@ let time = `${days[now.getDay()]} ${hour}:${min}`
 currenttime.innerHTML = `${time}`
     
 }
-function forecast(){
-    
+function forecast(responde){
+    console.log(responde)
     let days = [`mon`, `tue`, `wed`, `thr`, `fri`]
     let forecastHTML = ``
 
@@ -58,20 +58,20 @@ function changeHTML(responde){
     wind.innerHTML = speed
     temperatureElement.innerHTML = temperature
     newtime(nowt)
-    
+
 }
 
 function searchcity(city){
     let key = `313bd4cf07a141554b6c1ta1037bbboc`
-    let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}`
-    
-    axios.get(apiurl).then(changeHTML)
+    let Capiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}`
+    let Tapiurl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&&key=${key}`
+    axios.get(Capiurl).then(changeHTML)
+    axios.get(Tapiurl).then(forecast)
 }
 
 function searchsubmit(event){
     event.preventDefault()
     let searchinput = document.querySelector(`#searchbutton`)
-    
 
     searchcity(searchinput.value)
 }
