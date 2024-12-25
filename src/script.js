@@ -24,6 +24,22 @@ let time = `${days[now.getDay()]} ${hour}:${min}`
 currenttime.innerHTML = `${time}`
     
 }
+function forecast(){
+    
+    let days = [`mon`, `tue`, `wed`, `thr`, `fri`]
+    let forecastHTML = ``
+
+    days.forEach(function(day){
+        forecastHTML += `<div class="weekday"><div class="forecast-day">${day}</div>
+        <div class="forecast-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"></div>
+        <div class="forecast-temp">
+            <div class="fore-temp"><strong>31°</strong></div>
+            <div class="fore-temp">22°</div>
+        </div></div>`
+    })
+    let forecastElement = document.querySelector(`#waether-forecast`)
+    forecastElement.innerHTML = forecastHTML
+}
 function changeHTML(responde){
     let temperatureElement = document.querySelector(`#temp-num`)
     let newcity = document.querySelector(`#mcity`)
@@ -61,5 +77,6 @@ function searchsubmit(event){
 }
 let now = new Date()
 newtime(now)
+forecast()
 let search = document.querySelector(`#search`)
 search.addEventListener(`submit`,searchsubmit)
