@@ -19,20 +19,23 @@
     </header>
     <main class="report">
         <div class="info">
-            <h1 id="mcity">South Africa</h1>
+            <h1 id="mcity">Potchefstroom</h1>
             
                 <div class="monday">
-                    <div class="monday-d">monday 10:02, partly cloudy
+                    <div class="monday-d" ><samp id="monday">monday 10:02</samp>, <samp id="condition">partly cloudy</samp>
                         <br>
-                        humidity: <strong>40%</strong>, wind: <strong>21km/h</strong> 
+                        humidity: <strong> <samp id="humidity">40</samp>%</strong>, wind: <strong>
+                            <samp id="wind">21</samp>km/h</strong> 
                     </div>
                 </div>
             
         </div>
             
                 <div class="temp">
-                    <samp class="temp-icon">🌤️</samp> 
-                    <samp class="temp-num"> 29</samp> 
+                    <samp class="temp-icon" id="temp-icon">
+                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" >
+                    </samp> 
+                    <samp class="temp-num" id="temp-num"> 29</samp> 
                     <samp class="temp-c">°C</samp>
                 </div>
             

@@ -2,6 +2,7 @@ body{
     font-family: "Roboto", sans-serif;
     background:linear-gradient(to right,rgb(192, 58, 215) 11.4%,rgb(192, 216, 238) 88.6%)
 }
+samp{font-family: "Roboto", sans-serif;}
 strong{
     color: rgb(123, 93, 137);
 }
@@ -57,7 +58,7 @@ strong{
 
 .temp-icon{
     position: relative;
-    top: 20px;
+    top: 10px;
     font-size: 3pc;
 }
 h1{
